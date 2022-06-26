@@ -7,6 +7,7 @@ const hello = () => {
 };
 hello();
 
+// class and construtor es6
 class Human {
   constructor() {
     this.gender = "male";
@@ -31,3 +32,27 @@ class Person extends Human {
 const person = new Person();
 person.printMyName();
 person.printGender();
+
+// newer syntax for class and constructor
+class Animal {
+  // omit constructor syntax and define class properties immediately
+  gender = "male";
+  // Use arrow function for methods
+  printGender = () => {
+    console.log(this.gender);
+  };
+}
+
+class Dog extends Animal {
+  // omit constructor syntax and define class properties immediately
+  name = "Midnight";
+  gender = "female";
+  // Use arrow function for methods
+  printDogName = () => {
+    console.log(this.name);
+  };
+}
+
+const pet = new Dog();
+pet.printDogName();
+pet.printGender();
