@@ -82,3 +82,20 @@ const filter = (...args) => {
 };
 
 console.log(filter(1, 2, 3));
+
+// Array Destructing
+[a, b] = ["Hello", "Kurdus"];
+console.log(a);
+console.log(b);
+
+const names = ["Max", "William", "Jason"];
+// Skip William
+[name1, , name3] = names;
+// console.log(name1);
+console.log(name3);
+
+//Object Destructing
+const user = { name: "Gillian", age: 28 };
+const { name, age } = user;
+console.log(name);
+console.log(age);
