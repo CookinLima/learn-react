@@ -56,3 +56,22 @@ class Dog extends Animal {
 const pet = new Dog();
 pet.printDogName();
 pet.printGender();
+
+// Spread and Rest Operators
+const oldArray = [1, 2, 3];
+const newArray = [...oldArray, 4, 5];
+console.log(newArray);
+
+const oldObject = {
+  name: "John",
+  age: 23,
+  gender: "male",
+};
+
+const newObject = {
+  ...oldObject,
+  // gender in newObject overrides gender in oldObject
+  gender: "female",
+};
+
+console.log(newObject.gender);
