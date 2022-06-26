@@ -57,7 +57,7 @@ const pet = new Dog();
 pet.printDogName();
 pet.printGender();
 
-// Spread and Rest Operators
+// Spread Operators
 const oldArray = [1, 2, 3];
 const newArray = [...oldArray, 4, 5];
 console.log(newArray);
@@ -75,3 +75,10 @@ const newObject = {
 };
 
 console.log(newObject.gender);
+
+// Rest Operator
+const filter = (...args) => {
+  return args.filter((el) => el > 0);
+};
+
+console.log(filter(1, 2, 3));
