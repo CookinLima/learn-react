@@ -99,3 +99,34 @@ const user = { name: "Gillian", age: 28 };
 const { name, age } = user;
 console.log(name);
 console.log(age);
+
+// 7 Primitive Types
+// int, bigint, string, boolean, null, undefined, symbol
+
+// 3 Reference Types
+// array, function, object
+
+// ** ** ** ** ** ** ** ** ** ** ** **//
+const person1 = {
+  name: "Max",
+};
+// Declaring person2 = person1
+const person2 = person1;
+// Notice person2 is displaying name of Maxim instead of Max even after declaring person2 = person1 in line114
+person1.name = "Maxim";
+// Reason is because person2 is copying the pointer instead of the object itself
+console.log(person2);
+
+// ** ** ** ** ** ** ** ** ** ** ** **//
+// Copying array in an immuterable way
+const person3 = {
+  name: "Max",
+};
+// Use the Spread operator
+const person4 = {
+  ...person3,
+};
+person3.name = "Maxim";
+// Now person4 is copying the properties from the object and not the pointer
+console.log(person4);
+// ** ** ** ** ** ** ** ** ** ** ** **//
