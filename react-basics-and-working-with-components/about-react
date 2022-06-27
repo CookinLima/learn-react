@@ -1,0 +1,8 @@
+React is all about components
+
+So why use components? What's so special about them?
+
+1. Reusability
+   Don't repeat yourself
+2. Seperation of concerns
+   Don't do too many things in one and the same place (function)
