@@ -2,6 +2,8 @@ React is all about components
 
 So why use components? What's so special about them?
 
+** Components are basically just javascript functions **
+
 1. Reusability
    Don't repeat yourself
 2. Seperation of concerns
