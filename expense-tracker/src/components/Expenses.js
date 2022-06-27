@@ -5,10 +5,24 @@ function Expenses(props) {
   // console.log(props.allExpenses);
   return (
     <div className="expenses">
-      {props.allExpenses.map(({ title, amount, date }) => {
-        return <ExpenseItem title={title} amount={amount} date={date} />;
+      {props.allExpenses.map((item) => {
+        // console.log(item);
+        return (
+          <ExpenseItem
+            key={item.id}
+            title={item.title}
+            amount={item.amount}
+            date={item.date}
+          />
+        );
       })}
-      {/* <ExpenseItem
+    </div>
+  );
+}
+export default Expenses;
+
+{
+  /* <ExpenseItem
         title={props.allExpenses[0].title}
         amount={props.allExpenses[0].amount}
         date={props.allExpenses[0].date}
@@ -27,8 +41,5 @@ function Expenses(props) {
         title={props.allExpenses[3].title}
         amount={props.allExpenses[3].amount}
         date={props.allExpenses[3].date}
-      ></ExpenseItem> */}
-    </div>
-  );
+      ></ExpenseItem> */
 }
-export default Expenses;
