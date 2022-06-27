@@ -6,3 +6,7 @@ So why use components? What's so special about them?
    Don't repeat yourself
 2. Seperation of concerns
    Don't do too many things in one and the same place (function)
+
+React uses a declarative approach
+
+- Define the desired target state(s) and let React figure out the actual Javascript DOM instructions
