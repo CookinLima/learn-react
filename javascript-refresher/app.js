@@ -45,6 +45,7 @@ class Animal {
 
 class Dog extends Animal {
   // omit constructor syntax and define class properties immediately
+  // No need to call super() with new es6 syntax
   name = "Midnight";
   gender = "female";
   // Use arrow function for methods
@@ -113,9 +114,9 @@ const person1 = {
 // Declaring person2 = person1
 const person2 = person1;
 // Notice person2 is displaying name of Maxim instead of Max even after declaring person2 = person1 in line114
-person1.name = "Maxim";
+person2.name = "Maxim";
 // Reason is because person2 is copying the pointer instead of the object itself
-console.log(person2);
+console.log(person1);
 
 // ** ** ** ** ** ** ** ** ** ** ** **//
 // Copying array in an immuterable way
@@ -130,3 +131,9 @@ person3.name = "Maxim";
 // Now person4 is copying the properties from the object and not the pointer
 console.log(person4);
 // ** ** ** ** ** ** ** ** ** ** ** **//
+
+// Refreshing Array functions
+const number = [1, 2, 3];
+// map method
+const doubleNum = number.map((num) => num * 2);
+console.log(doubleNum);
